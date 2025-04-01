@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import HelloWorld from "./components/HelloWorld";
 import InputField from "./components/InputField";
+import './App.css';
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
+    const [inputValue, setInputValue] = useState("");
 
-  return (
-      <div className="p-4">
-        <HelloWorld />
-        <InputField label="Digite algo:" placeholder="Escreva aqui..." onChange={setInputValue} />
-        <p className="mt-2 text-lg">Valor digitado: {inputValue}</p>
-      </div>
-  );
+    return (
+        <div className="App">
+            <div className="App-header">
+                <HelloWorld />
+                <InputField label="Digite algo:" placeholder="Escreva aqui..." onChange={setInputValue} />
+            </div>
+        </div>
+    );
 }
 
 export default App;

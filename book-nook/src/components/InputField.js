@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import "./InputField.css";
 
 function InputField({ label, placeholder, onChange }) {
     return (
-        <div className="flex flex-col gap-2">
-            <label className="text-lg font-medium">{label}</label>
+        <div className="input-container">
+            <label className="input-label">{label}</label>
             <input
                 type="text"
                 placeholder={placeholder}
                 onChange={(e) => onChange(e.target.value)}
-                className="border rounded-lg p-2 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="input-field"
             />
         </div>
     );
